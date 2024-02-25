@@ -24,13 +24,11 @@ export const MenuItem = ({
     active,
     item,
     children,
-    scrollTo
 }: {
     setActive: (item: string) => void
     active: string | null
     item: string
     children?: React.ReactNode
-    scrollTo?: string
 }) => {
     return (
         <div onMouseEnter={() => setActive(item)} className="relative ">
@@ -47,7 +45,7 @@ export const MenuItem = ({
                     transition={transition}
                 >
                     {active === item && (
-                        <div className="absolute top-[calc(100%_+_1.4rem)] left-1/2 transform -translate-x-1/2" onClick={() => scroll(scrollTo || '')}>
+                        <div className="absolute top-[calc(100%_+_1.4rem)] left-1/2 transform -translate-x-1/2">
                             <motion.div
                                 transition={transition}
                                 layoutId="active"
@@ -90,14 +88,16 @@ export const ProductItem = ({
     description,
     href,
     src,
+    scrollTo
 }: {
     title: string
     description: string
     href: string
     src: string
+    scrollTo?: string
 }) => {
     return (
-        <Link to={href} className="flex space-x-2">
+        <Link to={href} target="_blank" className="flex space-x-2" onClick={() => scroll(scrollTo || '')}>
             <img
                 src={src}
                 width={140}
@@ -117,10 +117,11 @@ export const ProductItem = ({
     )
 }
 
-export const HoveredLink = ({ children, ...rest }: any) => {
+export const HoveredLink = ({ children, scrollTo, ...rest }: any) => {
     return (
         <Link
             {...rest}
+            onClick={() => scroll(scrollTo || '')}
             className="text-neutral-700 dark:text-neutral-200 hover:text-black dark:hover:text-white "
         >
             {children}

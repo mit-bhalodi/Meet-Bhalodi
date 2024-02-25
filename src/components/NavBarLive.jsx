@@ -20,37 +20,37 @@ function Navbar({ className }) {
         >
             <Menu setActive={setActive}>
                 <p className="text-black dark:text-white text-left text-lg md:text-2xl flex flex-1" >Meet Bhalodi</p>
-                <MenuItem setActive={setActive} active={active} item="About me" scrollTo="#experiances">
+                <MenuItem setActive={setActive} active={active} item="About me">
                     <div className="flex flex-col space-y-4 text-sm">
-                        <HoveredLink href="/interface-design">Expericances</HoveredLink>
+                        <HoveredLink href="/interface-design" scrollTo="#experiances">Expericances</HoveredLink>
                         {/* <HoveredLink> Education</HoveredLink> */}
                     </div>
                 </MenuItem>
-                <MenuItem setActive={setActive} active={active} item="Projects" scrollTo="#myProjects">
+                <MenuItem setActive={setActive} active={active} item="Projects">
                     <div className="text-sm grid grid-cols-2 gap-10 p-4">
                         <ProductItem
-                            title="Algochurn"
-                            href="https://algochurn.com"
-                            src="https://assets.aceternity.com/demos/algochurn.webp"
-                            description="Prepare for tech interviews like never before."
+                            title="Resume Builder"
+                            href="https://github.com/mit-bhalodi/Resume-Builder"
+                            src="src/assets/resume_builder.png"
+                            description="Resume builder using React, Firebase and Tailwind"
                         />
                         <ProductItem
-                            title="Tailwind Master Kit"
-                            href="https://tailwindmasterkit.com"
-                            src="https://assets.aceternity.com/demos/tailwindmasterkit.webp"
-                            description="Production ready Tailwind css components for your next project"
+                            title="E-Commerce store for creatives"
+                            href="https://github.com/mit-bhalodi/art-by-sanskruti"
+                            src="src/assets/sanskruti_store.png"
+                            description="Online store using Angular, Django and Postgres"
                         />
                         <ProductItem
-                            title="Moonbeam"
-                            href="https://gomoonbeam.com"
-                            src="https://assets.aceternity.com/demos/Screenshot+2024-02-21+at+11.51.31%E2%80%AFPM.png"
-                            description="Never write from scratch again. Go from idea to blog in minutes."
+                            title="Password Generator"
+                            href="https://github.com/mit-bhalodi/Password-Generator"
+                            src="src/assets/pass_gen.png"
+                            description="Password Generator using react"
                         />
                         <ProductItem
-                            title="Rogue"
+                            title="Book Ex. - Share the knowledge"
                             href="https://userogue.com"
-                            src="https://assets.aceternity.com/demos/Screenshot+2024-02-21+at+11.47.07%E2%80%AFPM.png"
-                            description="Respond to government RFPs, RFIs and RFQs 10x faster using AI"
+                            src="src/assets/book_ex.png"
+                            description="Book exchange platform using React and Node"
                         />
                     </div>
                 </MenuItem>

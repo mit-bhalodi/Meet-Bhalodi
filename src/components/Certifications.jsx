@@ -4,7 +4,7 @@ import { FaGoogle } from "react-icons/fa6";
 const Certifications = () => {
     return (
         <div className='bg-gray-50 dark:bg-gray-700 p-6 rounded-lg border'>
-            <ol className="relative border-s border-gray-200 dark:border-gray-700">
+            <ol className="relative">
                 <li>
                     <div className='flex flex-row justify-start gap-4'>
                         <FaGoogle size={60} className='mx-2' />
@@ -16,7 +16,6 @@ const Certifications = () => {
                             </svg></a>
                         </div>
                     </div>
-
                 </li>
             </ol>
         </div>
