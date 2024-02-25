@@ -31,25 +31,25 @@ function Navbar({ className }) {
                         <ProductItem
                             title="Resume Builder"
                             href="https://github.com/mit-bhalodi/Resume-Builder"
-                            src="src/assets/resume_builder.png"
+                            src="https://i.ibb.co/f1BRmT4/resume-builder.png"
                             description="Resume builder using React, Firebase and Tailwind"
                         />
                         <ProductItem
                             title="E-Commerce store for creatives"
                             href="https://github.com/mit-bhalodi/art-by-sanskruti"
-                            src="src/assets/sanskruti_store.png"
+                            src="https://i.ibb.co/YPTSpWm/sanskruti-store.png"
                             description="Online store using Angular, Django and Postgres"
                         />
                         <ProductItem
                             title="Password Generator"
                             href="https://github.com/mit-bhalodi/Password-Generator"
-                            src="src/assets/pass_gen.png"
+                            src="https://i.ibb.co/YQHr36B/pass-gen.png"
                             description="Password Generator using react"
                         />
                         <ProductItem
                             title="Book Ex. - Share the knowledge"
-                            href="https://userogue.com"
-                            src="src/assets/book_ex.png"
+                            href="https://github.com/Aayush-Desai/Group-21-book_exchange"
+                            src="https://i.ibb.co/xHMcC4n/book-ex.png"
                             description="Book exchange platform using React and Node"
                         />
                     </div>

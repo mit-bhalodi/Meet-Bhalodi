@@ -27,7 +27,7 @@ export function ThreeDCardLive() {
                     className="w-full my-10 flex items-center justify-center"
                 >
                     <img
-                        src="src/assets/meet_bhalodi.jpeg"
+                        src="https://i.ibb.co/5TGPDxM/meet-bhalodi.jpg"
                         height="200"
                         width="200"
                         loading="lazy"
