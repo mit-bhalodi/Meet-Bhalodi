@@ -13,20 +13,20 @@ export function NavBarLive() {
 }
 
 function Navbar({ className }) {
-    const [active, setActive] = useState (null);
+    const [active, setActive] = useState(null);
     return (
         <div
             className={cn("fixed top-10 inset-x-0 max-w-2xl mx-auto z-50 boder border-red", className)}
         >
             <Menu setActive={setActive}>
-                <p className="text-black dark:text-white text-left text-lg md:text-2xl flex flex-1">Meet Bhalodi</p>
-                <MenuItem setActive={setActive} active={active} item="About me">
+                <p className="text-black dark:text-white text-left text-lg md:text-2xl flex flex-1" >Meet Bhalodi</p>
+                <MenuItem setActive={setActive} active={active} item="About me" scrollTo="#experiances">
                     <div className="flex flex-col space-y-4 text-sm">
-                        <HoveredLink href="/web-dev">Education</HoveredLink>
                         <HoveredLink href="/interface-design">Expericances</HoveredLink>
+                        {/* <HoveredLink> Education</HoveredLink> */}
                     </div>
                 </MenuItem>
-                <MenuItem setActive={setActive} active={active} item="Projects">
+                <MenuItem setActive={setActive} active={active} item="Projects" scrollTo="#myProjects">
                     <div className="text-sm grid grid-cols-2 gap-10 p-4">
                         <ProductItem
                             title="Algochurn"

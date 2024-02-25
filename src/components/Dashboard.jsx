@@ -1,5 +1,4 @@
 import React from 'react'
-import { ThreeDCardLive } from './ThreeDCardLive'
 import { GridBackgroundDemo } from './GridBackground'
 
 const Dashboard = () => {

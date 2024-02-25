@@ -1,11 +1,10 @@
-const defaultTheme = require("tailwindcss/defaultTheme");
 const svgToDataUri = require("mini-svg-data-uri");
-const colors = require("tailwindcss/colors");
 const {
   default: flattenColorPalette,
 } = require("tailwindcss/lib/util/flattenColorPalette");
 
 export default {
+  darkMode: 'media',
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
@@ -15,7 +14,6 @@ export default {
     extend: {},
   },
   plugins: [
-    require('flowbite/plugin'),
     addVariablesForColors,
     function ({ matchUtilities, theme }) {
       matchUtilities(
@@ -39,6 +37,7 @@ export default {
         { values: flattenColorPalette(theme("backgroundColor")), type: "color" }
       );
     },
+    require('flowbite/plugin')
   ],
 }
 

@@ -12,16 +12,25 @@ const transition = {
     restSpeed: 0.001,
 }
 
+const scroll = ( scrollTo: string ) => {
+    if(scrollTo) {
+        const section = document.querySelector(scrollTo);
+        section?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+};
+
 export const MenuItem = ({
     setActive,
     active,
     item,
     children,
+    scrollTo
 }: {
     setActive: (item: string) => void
     active: string | null
     item: string
     children?: React.ReactNode
+    scrollTo?: string
 }) => {
     return (
         <div onMouseEnter={() => setActive(item)} className="relative ">
@@ -38,14 +47,14 @@ export const MenuItem = ({
                     transition={transition}
                 >
                     {active === item && (
-                        <div className="absolute top-[calc(100%_+_1.4rem)] left-1/2 transform -translate-x-1/2">
+                        <div className="absolute top-[calc(100%_+_1.4rem)] left-1/2 transform -translate-x-1/2" onClick={() => scroll(scrollTo || '')}>
                             <motion.div
                                 transition={transition}
-                                layoutId="active" // layoutId ensures smooth animation
-                                className="bg-gray-50 backdrop-blur-md dark:backdrop-blur-md rounded-2xl overflow-hidden border border-black/[0.2] dark:border-white/[0.2] shadow-xl"
+                                layoutId="active"
+                                className="bg-gray-50 dark:bg-gray-700 backdrop-blur-md dark:backdrop-blur-md rounded-2xl overflow-hidden border border-black/[0.2] dark:border-white/[0.2] shadow-xl"
                             >
                                 <motion.div
-                                    layout // layout ensures smooth animation
+                                    layout
                                     className="w-max h-full p-4"
                                 >
                                     {children}
