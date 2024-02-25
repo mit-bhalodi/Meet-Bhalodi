@@ -19,7 +19,8 @@ function Navbar({ className }) {
             className={cn("fixed top-10 inset-x-0 max-w-2xl mx-auto z-50 boder border-red", className)}
         >
             <Menu setActive={setActive}>
-                <p className="text-black dark:text-white text-left text-lg md:text-2xl flex flex-1" >Meet Bhalodi</p>
+                <p className="text-black dark:text-white text-left sm:text-sm md:text-2xl flex-1 hidden md:flex" >Meet Bhalodi</p>
+                <p className="text-black dark:text-white text-left text-sm flex md:hidden flex-1 font-bold">MB</p>
                 <MenuItem setActive={setActive} active={active} item="About me">
                     <div className="flex flex-col space-y-4 text-sm">
                         <HoveredLink href="/interface-design" scrollTo="#experiances">Expericances</HoveredLink>
